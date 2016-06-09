@@ -146,16 +146,17 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
     hInst = hInstance; // Store instance handle in our global variable
 
-    // The parameters to CreateWindow explained:
-    // szWindowClass: the name of the application
-    // szTitle: the text that appears in the title bar
-    // WS_OVERLAPPEDWINDOW: the type of window to create
-    // CW_USEDEFAULT, CW_USEDEFAULT: initial position (x, y)
-    // 500, 100: initial size (width, length)
-    // NULL: the parent of this window
-    // NULL: this application does not have a menu bar
-    // hInstance: the first parameter from WinMain
-    // NULL: not used in this application
+/** The parameters to CreateWindow explained:
+     * szWindowClass: the name of the application
+     * szTitle: the text that appears in the title bar
+     * WS_OVERLAPPEDWINDOW: the type of window to create
+     * CW_USEDEFAULT, CW_USEDEFAULT: initial position (x, y)
+     * 800, 600: initial size (width, length)
+     * NULL: the parent of this window
+     * NULL: this application does not have a menu bar
+     * hInstance: the first parameter from WinMain
+     * NULL: not used in this application
+	 */
     HWND hWnd = CreateWindow(
         szWindowClass,
         szTitle,
@@ -431,14 +432,14 @@ void DoPhysics(ULONGLONG dT)
 }
 
 //
-//  FUNCTION: WndProc(HWND, UINT, WPARAM, LPARAM)
-//
-//  PURPOSE:  Processes messages for the main window.
-//
-//  WM_PAINT    - Paint the main window
-//  WM_DESTROY  - post a quit message and return
-//
-//
+/** FUNCTION: WndProc(HWND, UINT, WPARAM, LPARAM)
+*
+*  PURPOSE:  Processes messages for the main window.
+*
+*  WM_PAINT    - Paint the main window
+*  WM_DESTROY  - post a quit message and return
+*
+*/
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
